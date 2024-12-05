@@ -38,8 +38,6 @@ async def start(message: Message):
 
 @dp.message(Command("shufle"))
 async def shufle(message: Message):
-    id = message.from_user.id
-
     all_users = [i[0] for i in database.get_all_users()]
 
     if not all_users:
@@ -64,10 +62,6 @@ async def shufle(message: Message):
 
 @dp.message(Command("notify"))
 async def shufle(message: Message):
-    id = message.from_user.id
-    if id != 1893217856:
-        return
-
     all_users = [i[0] for i in database.get_all_users()]
 
     for i, v in enumerate(all_users):

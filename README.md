@@ -2,6 +2,11 @@
 
 This project helps organize and manage a **Secret Santa** event.
 
+Send **/start** command to your bot.
+When all users have registered successfully, send **/notify** command, then **/shufle**.
+
+**Happy New Year🎄**
+
 ---
 
 ## 📥 How to Clone the Repository
@@ -15,7 +20,7 @@ To clone this repository, follow these steps:
    git clone https://github.com/Gor903/Secret-Santa.git
    ```
 
-## 📥 How to run
+## ❄️ How to run
 
 To run the project, follow these steps:
 
