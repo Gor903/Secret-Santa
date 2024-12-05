@@ -11,7 +11,7 @@ DB_USERNAME = os.getenv("DB_USERNAME")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 
-DATABASE_URL = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@localhost:5432/{DB_NAME}"
+DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
 
 engine = create_engine(DATABASE_URL)
 Base = declarative_base()
@@ -43,6 +43,9 @@ def add_user(user_id, username, name):
 
     session.add(user)
     session.commit()
+
+def get_user(user_id):
+    return session.query(User).where(User.user_id == user_id).first()
 
 
 def get_all_users():

@@ -32,9 +32,7 @@ To run the project, follow these steps:
     ```bash
     TOKEN="Telegram bot's token"
 
-    DB_USERNAME="db-username"
-    DB_PASSWORD="sb-password"
-    DB_NAME="sb-name"
+    SQLALCHEMY_DATABASE_URL="DB path here"
     ```
 3. Run the following commands:
    ```bash

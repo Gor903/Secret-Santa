@@ -28,7 +28,8 @@ async def start(message: Message):
     id = message.from_user.id
     username = message.from_user.username
     name = message.from_user.full_name
-    database.add_user(id, username, name)
+    if not database.get_user(id):
+        database.add_user(id, username, name)
 
     await message.answer(
         text="Do u want something?",
